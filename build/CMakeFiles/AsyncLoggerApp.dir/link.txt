@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/AsyncLoggerApp.dir/link.d CMakeFiles/AsyncLoggerApp.dir/src/main.cpp.o -o AsyncLoggerApp  libAsyncLoggerLib.a

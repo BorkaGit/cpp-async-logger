@@ -1,0 +1,2 @@
+/usr/bin/ar qc libAsyncLoggerLib.a CMakeFiles/AsyncLoggerLib.dir/src/AsyncLogger.cpp.o
+/usr/bin/ranlib libAsyncLoggerLib.a

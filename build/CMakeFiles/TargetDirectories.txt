@@ -1,0 +1,4 @@
+/home/volodymyr/projects/cpp-async-logger/build/CMakeFiles/AsyncLoggerLib.dir
+/home/volodymyr/projects/cpp-async-logger/build/CMakeFiles/AsyncLoggerApp.dir
+/home/volodymyr/projects/cpp-async-logger/build/CMakeFiles/edit_cache.dir
+/home/volodymyr/projects/cpp-async-logger/build/CMakeFiles/rebuild_cache.dir
