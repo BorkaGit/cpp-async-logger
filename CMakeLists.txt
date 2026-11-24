@@ -29,3 +29,43 @@ add_executable(AsyncLoggerApp
 target_link_libraries(AsyncLoggerApp PRIVATE
     AsyncLoggerLib
 )
+
+#GoogleTest
+include(FetchContent)
+
+FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG v1.18.0
+        GIT_SHALLOW TRUE
+)
+
+FetchContent_MakeAvailable(googletest)
+
+#Testing
+enable_testing()
+
+add_executable(AsyncLoggerTests
+        tests/AsyncLoggerTests.cpp
+)
+
+target_link_libraries(AsyncLoggerTests PRIVATE
+    AsyncLoggerLib
+    GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(AsyncLoggerTests)
+
+if (THREADPOOL_ENABLE_TSAN)
+    target_compile_options(AsyncLoggerTests PRIVATE
+    -fsanitize=thread
+    -fno-omit-frame-pointer
+    -g
+    -01
+    )
+
+    target_link_options(AsyncLoggerTests PRIVATE
+    -fsanitize=thread
+   )
+endif()
